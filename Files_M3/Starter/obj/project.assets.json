@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fredy\\Downloads\\LP5SampleApps\\Files_M3\\Starter\\Files_M3.csproj",
+      "projectUniqueName": "C:\\Users\\fredy\\Downloads\\AppsRepositorio\\SampleApps\\Files_M3\\Starter\\Files_M3.csproj",
       "projectName": "Files_M3",
-      "projectPath": "C:\\Users\\fredy\\Downloads\\LP5SampleApps\\Files_M3\\Starter\\Files_M3.csproj",
+      "projectPath": "C:\\Users\\fredy\\Downloads\\AppsRepositorio\\SampleApps\\Files_M3\\Starter\\Files_M3.csproj",
       "packagesPath": "C:\\Users\\fredy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fredy\\Downloads\\LP5SampleApps\\Files_M3\\Starter\\obj\\",
+      "outputPath": "C:\\Users\\fredy\\Downloads\\AppsRepositorio\\SampleApps\\Files_M3\\Starter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

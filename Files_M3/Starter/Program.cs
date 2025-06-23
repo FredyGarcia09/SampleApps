@@ -30,5 +30,55 @@ class Program
         TimeSpan timeTakenToReturn = timeAfterLoadCall - timeBeforeLoadCall;
         Console.WriteLine($"\nPerformance baseline: time taken to return to Main: {timeTakenToReturn.TotalSeconds} seconds");
 
+
+
+
+        // wait 2 seconds before starting the async task
+        await Task.Delay(2000);
+
+        // Load the customer data asynchronously from the file
+        Console.WriteLine("\nImplement File I/O tasks asynchronously.");
+
+        // Get the time before loading the data asynchronously
+        DateTime timeBeforeAsyncLoadCall = DateTime.Now;
+
+        // Start the async data loading task
+        var asyncLoadTask = LoadCustomerLogsAsync.ReadCustomerDataAsync(bank2);
+
+        DateTime timeAfterAsyncLoadCall = DateTime.Now;
+
+        Console.WriteLine($"\nTime taken to return to Main: {(timeAfterAsyncLoadCall - timeBeforeAsyncLoadCall).TotalSeconds} seconds");
+
+        // Wait for the async task to complete
+        await asyncLoadTask;
+
+        DateTime timeAfterAsyncLoadCompleted = DateTime.Now;
+
+        Console.WriteLine($"Time taken to load the data asynchronously: {(timeAfterAsyncLoadCompleted - timeBeforeAsyncLoadCall).TotalSeconds} seconds");
+
+
+
+
+        // wait 2 seconds before starting the parallel task
+        await Task.Delay(2000);
+
+        Console.WriteLine("\nImplement File I/O tasks asynchronously and in parallel.");
+
+        // Get the time before loading the data asynchronously using parallel tasks
+        DateTime timeBeforeAsyncParallelLoadCall = DateTime.Now;
+
+        // Start the async data loading task
+        var asyncParallelLoadTask = LoadCustomerLogsAsyncParallel.ReadCustomerDataAsyncParallel(bank3);
+
+        DateTime timeAfterAsyncParallelLoadCall = DateTime.Now;
+
+        // Wait for the async task to complete
+        await asyncParallelLoadTask;
+
+        DateTime timeAfterAsyncParallelLoadCompleted = DateTime.Now;
+
+        Console.WriteLine($"\nTime taken to return to Main: {(timeAfterAsyncParallelLoadCall - timeBeforeAsyncParallelLoadCall).TotalSeconds} seconds");
+        Console.WriteLine($"Time taken to load the data asynchronously and in parallel: {(timeAfterAsyncParallelLoadCompleted - timeBeforeAsyncParallelLoadCall).TotalSeconds} seconds");
+
     }
 }

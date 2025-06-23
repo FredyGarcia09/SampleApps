@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Files_M3",
-    "\\Files_M3\\Starter"
+    "\\Files_M3\\Starter",
+    "\\Files_M3\\Starter\\Services"
   ],
-  "SelectedNode": "\\Files_M3\\Starter\\Program.cs",
+  "SelectedNode": "\\Files_M3\\Starter\\Services",
   "PreviewInSolutionExplorer": false
 }
